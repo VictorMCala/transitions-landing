@@ -1,5 +1,10 @@
 # Source photo originals (only WebP in assets/images ships)
 Landing Global journalism page/
+Landing Global journalism page
+
+# Reference + screenshot artifacts (not part of the runtime site)
+design.png
+transitions-mobile.png
 
 # macOS
 .DS_Store
