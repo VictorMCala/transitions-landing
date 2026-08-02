@@ -46,7 +46,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .button-primary { color: var(--white); background: var(--burgundy); }
 .button-primary:hover { background: var(--burgundy-dark); }
 
-.welcome { background: var(--white); border-bottom: 1px solid var(--line); }
+.welcome { background: var(--white); }
 .welcome-inner { display: grid; padding-block: 30px; gap: 20px; }
 .welcome-icon { width: 68px; height: 68px; color: var(--burgundy); fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .welcome h2 { margin: 0 0 4px; color: var(--burgundy); font-size: 1.55rem; line-height: 1.2; }
