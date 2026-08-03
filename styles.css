@@ -108,7 +108,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .site-footer { color: var(--white); background: var(--burgundy); }
 .footer-grid { display: grid; padding-block: 34px; gap: 30px; }
 .conversation { display: grid; grid-template-columns: 88px 1fr; gap: 18px; }
-.conversation img { width: 88px; height: 88px; object-fit: cover; object-position: center 25%; border: 3px solid rgba(255, 255, 255, .75); border-radius: 50%; }
+.conversation img { width: 88px; height: 88px; object-fit: cover; object-position: center; border: 3px solid rgba(255, 255, 255, .75); border-radius: 50%; }
 .conversation h2 { margin: 0 0 4px; font-size: 1.35rem; line-height: 1.2; }
 .conversation p { margin: 0; font-size: .88rem; line-height: 1.35; }
 .contact-list { display: grid; align-content: center; gap: 5px; border-block: 1px solid rgba(255, 255, 255, .35); padding-block: 18px; }
