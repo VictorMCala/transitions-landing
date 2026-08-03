@@ -8,3 +8,8 @@ transitions-mobile.png
 
 # macOS
 .DS_Store
+
+# Build artifacts (FTP deploy)
+dist/
+globaledu-transitions-deploy.zip
+og-card.html
