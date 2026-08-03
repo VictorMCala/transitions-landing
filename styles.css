@@ -156,3 +156,72 @@ button, a { -webkit-tap-highlight-color: transparent; }
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
 }
+
+/* --- Motion --- */
+.js .welcome-inner,
+.js .section-heading,
+.js .opportunity-card,
+.js .reason-item,
+.js .prague,
+.js .numbers,
+.js .partner,
+.js .conversation,
+.js .contact-list,
+.js .qr-link {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity .7s cubic-bezier(.2, .6, .2, 1), transform .7s cubic-bezier(.2, .6, .2, 1);
+  will-change: opacity, transform;
+}
+.js .is-visible { opacity: 1; transform: none; }
+
+.js .opportunity-card:nth-child(2) { transition-delay: .1s; }
+.js .opportunity-card:nth-child(3) { transition-delay: .2s; }
+.js .reason-item:nth-child(2) { transition-delay: .08s; }
+.js .reason-item:nth-child(3) { transition-delay: .16s; }
+.js .reason-item:nth-child(4) { transition-delay: .24s; }
+.js .partner:nth-child(2) { transition-delay: .07s; }
+.js .partner:nth-child(3) { transition-delay: .14s; }
+.js .partner:nth-child(4) { transition-delay: .21s; }
+.js .partner:nth-child(5) { transition-delay: .28s; }
+
+@keyframes heroRise {
+  from { opacity: 0; transform: translateY(22px); }
+  to { opacity: 1; transform: none; }
+}
+.js .hero-content > * { opacity: 0; animation: heroRise .8s cubic-bezier(.2, .6, .2, 1) forwards; }
+.js .hero-content > h1 { animation-delay: .15s; }
+.js .hero-content > p { animation-delay: .34s; }
+.js .hero-content > .button { animation-delay: .52s; }
+
+.opportunity-card { transition: transform .35s ease, box-shadow .35s ease; }
+.opportunity-card:hover { transform: translateY(-6px); box-shadow: 0 20px 44px rgba(28, 10, 14, .15); }
+.card-image img { transition: transform .6s ease; }
+.opportunity-card:hover .card-image img { transform: scale(1.06); }
+.button { transition: background-color .2s ease, transform .18s ease, box-shadow .2s ease; }
+.button-primary:hover { transform: translateY(-2px); box-shadow: 0 10px 22px rgba(130, 0, 30, .32); }
+.partner img { transition: opacity .2s ease, transform .3s ease; }
+.partner:hover img { transform: translateY(-3px); }
+
+@media (prefers-reduced-motion: reduce) {
+  .js .welcome-inner,
+  .js .section-heading,
+  .js .opportunity-card,
+  .js .reason-item,
+  .js .prague,
+  .js .numbers,
+  .js .partner,
+  .js .conversation,
+  .js .contact-list,
+  .js .qr-link,
+  .js .hero-content > * {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+    animation: none !important;
+  }
+  .opportunity-card:hover { transform: none; }
+  .opportunity-card:hover .card-image img { transform: none; }
+  .button-primary:hover { transform: none; }
+  .partner:hover img { transform: none; }
+}

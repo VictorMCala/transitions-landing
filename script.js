@@ -12,3 +12,18 @@ menuButton?.addEventListener('click', () => {
 document.querySelectorAll('[data-muted]').forEach((link) => {
   link.addEventListener('click', (event) => event.preventDefault());
 });
+
+const animated = document.querySelectorAll('.welcome-inner, .section-heading, .opportunity-card, .reason-item, .prague, .numbers, .partner, .conversation, .contact-list, .qr-link');
+if ('IntersectionObserver' in window) {
+  const observer = new IntersectionObserver((entries, obs) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        obs.unobserve(entry.target);
+      }
+    });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  animated.forEach((el) => observer.observe(el));
+} else {
+  animated.forEach((el) => el.classList.add('is-visible'));
+}
