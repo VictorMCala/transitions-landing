@@ -60,11 +60,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .opportunity-card { position: relative; display: flex; flex-direction: column; background: var(--white); border: 1px solid var(--line); border-radius: 4px; overflow: hidden; box-shadow: 0 10px 30px rgba(28, 10, 14, .06); }
 .card-image { aspect-ratio: 16 / 10; overflow: hidden; }
 .card-image img { width: 100%; height: 100%; object-fit: cover; }
-.card-icon { position: absolute; top: clamp(150px, 53vw, 245px); left: 50%; display: grid; width: 68px; height: 68px; place-items: center; color: var(--white); border: 4px solid var(--white); border-radius: 50%; transform: translate(-50%, -50%); }
+.card-icon { position: absolute; top: 0; left: 50%; display: grid; width: 68px; height: 68px; place-items: center; color: var(--white); border: 4px solid var(--white); border-radius: 50%; transform: translate(-50%, -50%); }
 .card-icon svg { width: 35px; height: 35px; fill: none; stroke: currentColor; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .burgundy { background: var(--burgundy); }
 .navy { background: var(--navy); }
-.card-body { display: flex; flex: 1; flex-direction: column; padding: 48px 24px 20px; text-align: center; }
+.card-body { position: relative; display: flex; flex: 1; flex-direction: column; padding: 48px 24px 20px; text-align: center; }
 .card-body h3 { margin: 0; color: var(--navy); font-size: 1.25rem; line-height: 1.25; }
 .opportunity-card:first-child h3 { color: var(--burgundy); }
 .card-body p { flex: 1; margin: 12px auto 22px; max-width: 310px; }
@@ -98,8 +98,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .partners { padding-bottom: 40px; }
 .partners .section-heading { margin-bottom: 26px; }
 .partner-list { display: grid; grid-template-columns: repeat(2, 1fr); align-items: center; gap: 28px 18px; text-align: center; }
-.partner-list > span { display: flex; min-height: 68px; flex-direction: column; justify-content: center; font-family: Georgia, 'Times New Roman', serif; line-height: 1; }
-.partner-list strong { font-size: 1.45rem; }
+.partner-list > span { display: flex; min-width: 0; min-height: 68px; flex-direction: column; justify-content: center; font-family: Georgia, 'Times New Roman', serif; line-height: 1; }
+.partner-list strong { font-size: 1.2rem; overflow-wrap: break-word; }
 .partner-list small { margin-top: 4px; font-family: Arial, Helvetica, sans-serif; font-size: .65rem; letter-spacing: 0; text-transform: uppercase; }
 .tennessee { color: #a94600; }
 .western, .northwestern, .nyu { color: #4b1687; }
@@ -124,8 +124,8 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .section-heading { grid-template-columns: minmax(24px, 1fr) auto minmax(24px, 1fr); }
   .section-heading span { display: block; }
   .opportunity-grid, .reasons-grid { grid-template-columns: repeat(2, 1fr); }
-  .card-icon { top: min(28vw, 225px); }
   .partner-list { grid-template-columns: repeat(5, 1fr); }
+  .partner-list strong { font-size: 1.45rem; }
 }
 
 @media (min-width: 900px) {
@@ -141,7 +141,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .hero-content { padding-block: 72px; }
   .hero h1 { max-width: 650px; }
   .opportunity-grid { grid-template-columns: repeat(3, 1fr); }
-  .card-icon { top: 182px; }
   .reasons-grid { grid-template-columns: repeat(4, 1fr); gap: 0; }
   .reason-item { padding-inline: 20px; border-right: 1px solid var(--line); }
   .reason-item:first-child { padding-left: 0; }
