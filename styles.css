@@ -112,7 +112,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-list a { display: flex; min-height: 44px; align-items: center; gap: 13px; text-decoration: none; }
 .contact-list svg { width: 24px; height: 24px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
 .qr-link { display: flex; min-height: 120px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
-.qr-link svg { width: 88px; height: 88px; padding: 7px; color: var(--ink); background: var(--white); fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
+.qr-link img { width: 96px; height: 96px; padding: 6px; background: var(--white); border-radius: 6px; }
 .qr-link span { font-size: .85rem; }
 
 @media (min-width: 600px) {
