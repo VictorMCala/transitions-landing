@@ -13,7 +13,7 @@ document.querySelectorAll('[data-muted]').forEach((link) => {
   link.addEventListener('click', (event) => event.preventDefault());
 });
 
-const animated = document.querySelectorAll('.welcome-inner, .section-heading, .opportunity-card, .reason-item, .prague, .numbers, .partner, .conversation, .contact-list, .qr-link');
+const animated = document.querySelectorAll('.welcome-inner, .section-heading, .opportunity-card, .reason-item, .prague, .numbers, .partner, .conversation, .contact-list, .social');
 if ('IntersectionObserver' in window) {
   const observer = new IntersectionObserver((entries, obs) => {
     entries.forEach((entry) => {

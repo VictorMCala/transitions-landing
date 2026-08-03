@@ -111,9 +111,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .contact-list { display: grid; align-content: center; gap: 5px; border-block: 1px solid rgba(255, 255, 255, .35); padding-block: 18px; }
 .contact-list a { display: flex; min-height: 44px; align-items: center; gap: 13px; text-decoration: none; }
 .contact-list svg { width: 24px; height: 24px; flex: 0 0 auto; fill: none; stroke: currentColor; stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.qr-link { display: flex; min-height: 120px; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-decoration: none; }
-.qr-link img { width: 96px; height: 96px; padding: 6px; background: var(--white); border-radius: 6px; }
-.qr-link span { font-size: .85rem; }
+.social { display: grid; align-content: center; gap: 4px; }
+.social-title { margin: 0 0 4px; font-size: .95rem; font-weight: 700; }
+.social-account { display: flex; min-height: 34px; align-items: center; gap: 11px; font-size: .9rem; text-decoration: none; }
+.social-account svg { width: 20px; height: 20px; flex: 0 0 auto; fill: currentColor; }
+.social-account:hover { text-decoration: underline; }
 
 @media (min-width: 600px) {
   .container { width: min(100% - 48px, var(--max-width)); }
@@ -148,9 +150,9 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .prague img { height: 100%; }
   .number-grid { grid-template-columns: repeat(4, 1fr); }
   .stat { min-height: 185px; }
-  .footer-grid { grid-template-columns: 1.5fr 1fr .48fr; align-items: center; gap: 40px; }
+  .footer-grid { grid-template-columns: 1.4fr 1fr .72fr; align-items: center; gap: 40px; }
   .contact-list { padding: 0 0 0 34px; border-block: 0; border-left: 1px solid rgba(255, 255, 255, .35); }
-  .qr-link { border-left: 1px solid rgba(255, 255, 255, .35); }
+  .social { padding-left: 34px; border-left: 1px solid rgba(255, 255, 255, .35); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -167,7 +169,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .js .partner,
 .js .conversation,
 .js .contact-list,
-.js .qr-link {
+.js .social {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity .7s cubic-bezier(.2, .6, .2, 1), transform .7s cubic-bezier(.2, .6, .2, 1);
@@ -213,7 +215,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .js .partner,
   .js .conversation,
   .js .contact-list,
-  .js .qr-link,
+  .js .social,
   .js .hero-content > * {
     opacity: 1 !important;
     transform: none !important;
